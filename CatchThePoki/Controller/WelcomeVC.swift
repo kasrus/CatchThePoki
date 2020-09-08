@@ -12,12 +12,15 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var notName: UIButton!
+   
     
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var playView: UIView!
+    @IBOutlet weak var notNameButton: UIButton!
+    
     
     var userName: String!
+    var isAlertCalled = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,37 +33,64 @@ class WelcomeVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        nameText.text = ""
         if nameLabel.text != "" {
             nameView.isHidden = true
             playView.isHidden = false
-            notName.setTitle("Not \(nameLabel.text!)", for: UIControl.State.normal) 
+            showNotNameButton()
         } else {
             nameView.isHidden = false
             playView.isHidden = true
+            notNameButton.isHidden = true
         }
     }
+    
+    func showNotNameButton() {
+        if nameLabel.text != "" {
+            notNameButton.isHidden = false
+            notNameButton.setTitle("Not \(nameLabel.text!) ?", for: UIControl.State.normal)
+        }
+    }
+    
     @IBAction func saveClicked(_ sender: Any) {
         UserDefaults.standard.set(nameText.text!, forKey: "name")
         nameLabel.text = nameText.text!
-        nameText.text = ""
-        nameView.isHidden = true
+        createAlert()
+        if !isAlertCalled {
+            showNotNameButton()
+            nameView.isHidden = true
+            playView.isHidden = false
+            userName = nameText.text!
+        } else {
+            nameView.isHidden = false
+            playView.isHidden = true
+            nameText.text = ""
+        }
     }
     
     @IBAction func startGame(_ sender: Any) {
-        if nameLabel.text == "" && nameText.text == "" {
-            createAlert()
-        }
         performSegue(withIdentifier: "toPokiVC", sender: nil)
     }
     
-    @IBAction func deletePlayer(_ sender: Any) {
-        
+    @IBAction func notNameClicked(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "name")
+        userName = ""
+        nameLabel.text = ""
+        nameView.isHidden = false
+        playView.isHidden = true
+        notNameButton.isHidden = true
     }
+    
     func createAlert () {
-        let alert = UIAlertController(title: "Error", message: "Please enter a user name", preferredStyle: UIAlertController.Style.alert)
-        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
+        if nameLabel.text == "" && nameText.text == "" {
+            let alert = UIAlertController(title: "Error", message: "Please enter a user name", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+            isAlertCalled = true
+        } else {
+            isAlertCalled = false
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

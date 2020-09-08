@@ -39,6 +39,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF27A1322508431F002CC379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF27A1332508432C002CC379 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F02CC2503007000099874 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF27A1342508435B002CC379 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F02CA2503007000099874 /* WelcomeVC.swift */,
+				AF5F02DA250304A800099874 /* PokiVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AF5F02BA2503006F00099874 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +82,14 @@
 		AF5F02C52503007000099874 /* CatchThePoki */ = {
 			isa = PBXGroup;
 			children = (
+				AF27A1342508435B002CC379 /* Controller */,
+				AF27A1332508432C002CC379 /* View */,
+				AF27A1322508431F002CC379 /* Model */,
 				AF5F02C62503007000099874 /* AppDelegate.swift */,
 				AF5F02C82503007000099874 /* SceneDelegate.swift */,
-				AF5F02CA2503007000099874 /* WelcomeVC.swift */,
-				AF5F02CC2503007000099874 /* Main.storyboard */,
 				AF5F02CF2503007400099874 /* Assets.xcassets */,
 				AF5F02D12503007400099874 /* LaunchScreen.storyboard */,
 				AF5F02D42503007400099874 /* Info.plist */,
-				AF5F02DA250304A800099874 /* PokiVC.swift */,
 			);
 			path = CatchThePoki;
 			sourceTree = "<group>";
