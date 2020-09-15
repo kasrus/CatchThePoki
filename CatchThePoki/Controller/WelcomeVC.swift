@@ -12,70 +12,37 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var saveButton: UIButton!
-   
     
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var playView: UIView!
     @IBOutlet weak var notNameButton: UIButton!
     
-    
-    var userName: String!
     var isAlertCalled = false
+    var player: Player!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        player = Player()
         
+        //loading the name stored & display it on the welcome screen
         let storedName = UserDefaults.standard.object(forKey: "name")
         if let newName = storedName as? String {
-            userName = newName
-            nameLabel.text = userName
+            player.name = newName
+            nameLabel.text = newName
+         
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         nameText.text = ""
         if nameLabel.text != "" {
-            nameView.isHidden = true
-            playView.isHidden = false
-            showNotNameButton()
+            userNameCreated()
         } else {
-            nameView.isHidden = false
-            playView.isHidden = true
-            notNameButton.isHidden = true
+            createUserName()
         }
     }
-    
-    func showNotNameButton() {
-        if nameLabel.text != "" {
-            notNameButton.isHidden = false
-            notNameButton.setTitle("Not \(nameLabel.text!) ?", for: UIControl.State.normal)
-        }
-    }
-    
-    @IBAction func saveClicked(_ sender: Any) {
-        UserDefaults.standard.set(nameText.text!, forKey: "name")
-        nameLabel.text = nameText.text!
-        createAlert()
-        if !isAlertCalled {
-            showNotNameButton()
-            nameView.isHidden = true
-            playView.isHidden = false
-            userName = nameText.text!
-        } else {
-            nameView.isHidden = false
-            playView.isHidden = true
-            nameText.text = ""
-        }
-    }
-    
-    @IBAction func startGame(_ sender: Any) {
-        performSegue(withIdentifier: "toPokiVC", sender: nil)
-    }
-    
-    @IBAction func notNameClicked(_ sender: Any) {
-        UserDefaults.standard.removeObject(forKey: "name")
-        userName = ""
-        nameLabel.text = ""
+    func createUserName () {
+        nameText.text = ""
         nameView.isHidden = false
         playView.isHidden = true
         notNameButton.isHidden = true
@@ -93,10 +60,44 @@ class WelcomeVC: UIViewController {
         }
     }
     
+    @IBAction func saveClicked(_ sender: Any) {
+        UserDefaults.standard.set(nameText.text!, forKey: "name")
+        nameLabel.text = nameText.text!
+        createAlert()
+        if !isAlertCalled {
+            userNameCreated()
+            player.name = nameText.text!
+        } else {
+            createUserName()
+        }
+    }
+    
+    func userNameCreated () {
+        nameView.isHidden = true
+        playView.isHidden = false
+        showNotNameButton()
+    }
+    
+    func showNotNameButton() {
+        if nameLabel.text != "" {
+            notNameButton.setTitle("Not \(nameLabel.text!) ?", for: UIControl.State.normal)
+            notNameButton.isHidden = false
+        }
+    }
+    
+    @IBAction func startGame(_ sender: Any) {
+        performSegue(withIdentifier: "toPokiVC", sender: nil)
+    }
+    
+    @IBAction func notNameClicked(_ sender: Any) {
+        nameLabel.text = ""
+        createUserName()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toPokiVC" {
             let destinationVC = segue.destination as! PokiVC
-            destinationVC.userName = userName
+            destinationVC.player = player
         }
     }
     

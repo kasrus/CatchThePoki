@@ -174,101 +174,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp7-6E-mGw">
-                                <rect key="frame" x="131" y="115" width="152" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgY-NS-Hgm">
+                                <rect key="frame" x="20" y="739" width="374" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="JId-eM-nme"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-c2-z3Y">
-                                <rect key="frame" x="131" y="191" width="152" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="TYk-76-ZHw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lr9-EX-sgB">
-                                <rect key="frame" x="20" y="310" width="374" height="374"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1D8-5m-38E">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="124.5"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="IxG-jG-ki6">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="124.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="118" id="JVX-50-Nhs"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="Mjh-rC-lgg">
-                                                <rect key="frame" x="118" y="0.0" width="128" height="124.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="128" id="vgw-Ew-FAf"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="qe0-vS-rW3">
-                                                <rect key="frame" x="246" y="0.0" width="128" height="124.5"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLm-TX-v35">
-                                        <rect key="frame" x="0.0" y="124.5" width="374" height="125"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="paC-oF-VYr">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="125"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="118" id="NAR-ej-B9h"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="YK5-hg-uR2">
-                                                <rect key="frame" x="118" y="0.0" width="128" height="125"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="128" id="Y35-3c-eaA"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="AAK-TA-CV7">
-                                                <rect key="frame" x="246" y="0.0" width="128" height="125"/>
-                                            </imageView>
-                                        </subviews>
-                                        <viewLayoutGuide key="safeArea" id="YXg-Lv-zOJ"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HV-eI-aa4">
-                                        <rect key="frame" x="0.0" y="249.5" width="374" height="124.5"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="79F-6i-Wbx">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="124.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="118" id="zPl-iB-ZZ6"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="pmw-Eq-wNA">
-                                                <rect key="frame" x="118" y="0.0" width="128" height="124.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="128" id="68T-HF-fiU"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="jJF-9w-bhE">
-                                                <rect key="frame" x="246" y="0.0" width="128" height="124.5"/>
-                                            </imageView>
-                                        </subviews>
-                                        <viewLayoutGuide key="safeArea" id="g2Q-MV-DNk"/>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="fLm-TX-v35" firstAttribute="top" secondItem="Lr9-EX-sgB" secondAttribute="top" constant="124.5" id="6CR-5o-ynU"/>
-                                    <constraint firstItem="fLm-TX-v35" firstAttribute="centerY" secondItem="Lr9-EX-sgB" secondAttribute="centerY" id="MbN-r0-Znk"/>
-                                </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgY-NS-Hgm">
-                                <rect key="frame" x="106" y="766" width="202" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="aQT-G5-cdN"/>
+                                    <constraint firstAttribute="height" constant="49" id="ciY-ce-wwX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-c2-z3Y">
+                                <rect key="frame" x="86.5" y="166" width="79" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="nOb-tl-nua"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJm-bd-UDz">
+                                <rect key="frame" x="15" y="251" width="384" height="403"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="eCT-Cl-tnc">
+                                        <rect key="frame" x="20" y="268" width="102" height="113"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-LA-Twp">
+                                        <rect key="frame" x="262" y="270" width="102" height="113"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="be1-p7-pqh">
+                                        <rect key="frame" x="142" y="268" width="102" height="113"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="IJI-Rd-O1e">
+                                        <rect key="frame" x="262" y="20" width="102" height="113"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="eOw-mO-yhM">
+                                        <rect key="frame" x="20" y="20" width="102" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="AQP-Ke-8L3"/>
+                                            <constraint firstAttribute="height" constant="113" id="lDW-YP-xtr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="ThG-aj-meK">
+                                        <rect key="frame" x="142" y="20" width="102" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="QzK-dm-zFy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="CEI-Rl-ecp">
+                                        <rect key="frame" x="142" y="147" width="102" height="113"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="zP3-K8-WAn">
+                                        <rect key="frame" x="20" y="147" width="102" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="113" id="p9a-B9-9cE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poki" translatesAutoresizingMaskIntoConstraints="NO" id="H1h-YO-D0e">
+                                        <rect key="frame" x="262" y="147" width="102" height="113"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="zP3-K8-WAn" firstAttribute="leading" secondItem="eCT-Cl-tnc" secondAttribute="leading" id="0Oz-px-7oi"/>
+                                    <constraint firstItem="eCT-Cl-tnc" firstAttribute="bottom" secondItem="be1-p7-pqh" secondAttribute="bottom" id="65q-TY-Pse"/>
+                                    <constraint firstItem="eOw-mO-yhM" firstAttribute="top" secondItem="ThG-aj-meK" secondAttribute="top" id="7nB-Mm-xYg"/>
+                                    <constraint firstItem="zP3-K8-WAn" firstAttribute="trailing" secondItem="eCT-Cl-tnc" secondAttribute="trailing" id="7zB-EW-fuE"/>
+                                    <constraint firstItem="eCT-Cl-tnc" firstAttribute="top" secondItem="zP3-K8-WAn" secondAttribute="bottom" constant="8" id="B1w-ZY-NIi"/>
+                                    <constraint firstItem="ThG-aj-meK" firstAttribute="trailing" secondItem="CEI-Rl-ecp" secondAttribute="trailing" id="ERo-d1-CnD"/>
+                                    <constraint firstItem="ThG-aj-meK" firstAttribute="top" secondItem="IJI-Rd-O1e" secondAttribute="top" id="Fpn-GG-rU1"/>
+                                    <constraint firstAttribute="bottom" secondItem="eCT-Cl-tnc" secondAttribute="bottom" constant="22" id="Gf5-VD-5q8"/>
+                                    <constraint firstItem="CEI-Rl-ecp" firstAttribute="trailing" secondItem="be1-p7-pqh" secondAttribute="trailing" id="JC8-LU-7Sl"/>
+                                    <constraint firstItem="sDI-LA-Twp" firstAttribute="top" secondItem="H1h-YO-D0e" secondAttribute="bottom" constant="10" id="Jsv-BF-Jxr"/>
+                                    <constraint firstItem="eOw-mO-yhM" firstAttribute="bottom" secondItem="ThG-aj-meK" secondAttribute="bottom" id="KZi-ea-Bby"/>
+                                    <constraint firstAttribute="bottom" secondItem="sDI-LA-Twp" secondAttribute="bottom" constant="20" id="LZ3-Ni-qfl"/>
+                                    <constraint firstItem="CEI-Rl-ecp" firstAttribute="bottom" secondItem="H1h-YO-D0e" secondAttribute="bottom" id="Nby-vg-vGE"/>
+                                    <constraint firstItem="CEI-Rl-ecp" firstAttribute="leading" secondItem="be1-p7-pqh" secondAttribute="leading" id="V0R-L7-EEJ"/>
+                                    <constraint firstItem="eCT-Cl-tnc" firstAttribute="top" secondItem="be1-p7-pqh" secondAttribute="top" id="Vub-LF-CZ4"/>
+                                    <constraint firstItem="H1h-YO-D0e" firstAttribute="leading" secondItem="sDI-LA-Twp" secondAttribute="leading" id="XFT-eZ-hBv"/>
+                                    <constraint firstItem="ThG-aj-meK" firstAttribute="leading" secondItem="CEI-Rl-ecp" secondAttribute="leading" id="Y76-Gz-ZuW"/>
+                                    <constraint firstItem="zP3-K8-WAn" firstAttribute="top" secondItem="CEI-Rl-ecp" secondAttribute="top" id="gPy-dF-uEq"/>
+                                    <constraint firstItem="eOw-mO-yhM" firstAttribute="leading" secondItem="zP3-K8-WAn" secondAttribute="leading" id="hfm-vO-zDP"/>
+                                    <constraint firstItem="H1h-YO-D0e" firstAttribute="trailing" secondItem="sDI-LA-Twp" secondAttribute="trailing" id="iC7-x0-aKK"/>
+                                    <constraint firstItem="eOw-mO-yhM" firstAttribute="leading" secondItem="VJm-bd-UDz" secondAttribute="leading" constant="20" id="ijo-sa-xZQ"/>
+                                    <constraint firstItem="zP3-K8-WAn" firstAttribute="top" secondItem="eOw-mO-yhM" secondAttribute="bottom" constant="14" id="kIm-bi-NSq"/>
+                                    <constraint firstItem="IJI-Rd-O1e" firstAttribute="trailing" secondItem="H1h-YO-D0e" secondAttribute="trailing" id="kLA-2I-kLC"/>
+                                    <constraint firstItem="eOw-mO-yhM" firstAttribute="trailing" secondItem="zP3-K8-WAn" secondAttribute="trailing" id="lex-Ho-Y4X"/>
+                                    <constraint firstItem="ThG-aj-meK" firstAttribute="leading" secondItem="eOw-mO-yhM" secondAttribute="trailing" constant="20" id="qMc-Ka-Ugl"/>
+                                    <constraint firstItem="zP3-K8-WAn" firstAttribute="bottom" secondItem="CEI-Rl-ecp" secondAttribute="bottom" id="qmb-1t-jJz"/>
+                                    <constraint firstItem="CEI-Rl-ecp" firstAttribute="top" secondItem="H1h-YO-D0e" secondAttribute="top" id="tKW-qQ-70q"/>
+                                    <constraint firstItem="ThG-aj-meK" firstAttribute="bottom" secondItem="IJI-Rd-O1e" secondAttribute="bottom" id="tZq-ad-UJg"/>
+                                    <constraint firstAttribute="trailing" secondItem="IJI-Rd-O1e" secondAttribute="trailing" constant="20" id="thd-LY-qRU"/>
+                                    <constraint firstItem="IJI-Rd-O1e" firstAttribute="leading" secondItem="ThG-aj-meK" secondAttribute="trailing" constant="18" id="ti6-G7-K93"/>
+                                    <constraint firstItem="eOw-mO-yhM" firstAttribute="top" secondItem="VJm-bd-UDz" secondAttribute="top" constant="20" id="uNK-Fs-V6r"/>
+                                    <constraint firstItem="IJI-Rd-O1e" firstAttribute="leading" secondItem="H1h-YO-D0e" secondAttribute="leading" id="vQM-86-kub"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp7-6E-mGw">
+                                <rect key="frame" x="131" y="115" width="153" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="7Os-sF-9SM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -276,32 +282,39 @@
                         <viewLayoutGuide key="safeArea" id="X0m-CO-uxp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Lp7-6E-mGw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gcK-c2-z3Y" secondAttribute="leading" id="1Jp-b0-Z7W"/>
-                            <constraint firstItem="gcK-c2-z3Y" firstAttribute="top" secondItem="Lp7-6E-mGw" secondAttribute="bottom" constant="33" id="8sN-Jn-pFe"/>
-                            <constraint firstItem="Lr9-EX-sgB" firstAttribute="centerX" secondItem="YgY-NS-Hgm" secondAttribute="centerX" id="Amr-Jd-fSI"/>
-                            <constraint firstItem="Lr9-EX-sgB" firstAttribute="trailing" secondItem="RVE-hM-JK0" secondAttribute="trailingMargin" id="Bha-xn-1yU"/>
-                            <constraint firstItem="YgY-NS-Hgm" firstAttribute="top" secondItem="Lr9-EX-sgB" secondAttribute="bottom" constant="82" id="Lpr-7x-xDq"/>
-                            <constraint firstItem="Lp7-6E-mGw" firstAttribute="leading" secondItem="X0m-CO-uxp" secondAttribute="leading" constant="131" id="Rqs-k6-2VO"/>
-                            <constraint firstItem="X0m-CO-uxp" firstAttribute="bottom" secondItem="YgY-NS-Hgm" secondAttribute="bottom" constant="68" id="Y59-M2-TXb"/>
-                            <constraint firstItem="Lp7-6E-mGw" firstAttribute="top" secondItem="X0m-CO-uxp" secondAttribute="top" constant="27" id="bV2-Fh-nXo"/>
-                            <constraint firstItem="gcK-c2-z3Y" firstAttribute="centerX" secondItem="Lr9-EX-sgB" secondAttribute="centerX" id="lex-pt-qAt"/>
-                            <constraint firstItem="Lr9-EX-sgB" firstAttribute="leading" secondItem="RVE-hM-JK0" secondAttribute="leadingMargin" id="lfI-4z-h6v"/>
-                            <constraint firstItem="YgY-NS-Hgm" firstAttribute="leading" secondItem="X0m-CO-uxp" secondAttribute="leading" constant="106" id="oer-Zq-0HU"/>
-                            <constraint firstItem="Lr9-EX-sgB" firstAttribute="top" secondItem="gcK-c2-z3Y" secondAttribute="bottom" constant="76" id="qTW-Xd-8O6"/>
-                            <constraint firstItem="gcK-c2-z3Y" firstAttribute="centerX" secondItem="RVE-hM-JK0" secondAttribute="centerX" id="rzy-dj-Djv"/>
-                            <constraint firstItem="Lp7-6E-mGw" firstAttribute="trailing" secondItem="gcK-c2-z3Y" secondAttribute="trailing" id="yfh-Mq-ehM"/>
+                            <constraint firstItem="gcK-c2-z3Y" firstAttribute="leading" secondItem="X0m-CO-uxp" secondAttribute="leading" constant="86.5" id="Ig3-s6-dYQ"/>
+                            <constraint firstItem="VJm-bd-UDz" firstAttribute="centerX" secondItem="YgY-NS-Hgm" secondAttribute="centerX" id="Lcb-hA-JjQ"/>
+                            <constraint firstItem="Lp7-6E-mGw" firstAttribute="centerX" secondItem="VJm-bd-UDz" secondAttribute="centerX" id="M41-aH-zD8"/>
+                            <constraint firstItem="VJm-bd-UDz" firstAttribute="top" secondItem="gcK-c2-z3Y" secondAttribute="bottom" constant="42" id="NND-Jl-H6j"/>
+                            <constraint firstItem="Lp7-6E-mGw" firstAttribute="top" secondItem="X0m-CO-uxp" secondAttribute="top" constant="27" id="RUP-fh-fK0"/>
+                            <constraint firstItem="X0m-CO-uxp" firstAttribute="bottom" secondItem="YgY-NS-Hgm" secondAttribute="bottom" constant="74" id="W1k-hv-SRs"/>
+                            <constraint firstItem="YgY-NS-Hgm" firstAttribute="trailing" secondItem="RVE-hM-JK0" secondAttribute="trailingMargin" id="ZUC-Ix-JhR"/>
+                            <constraint firstItem="YgY-NS-Hgm" firstAttribute="top" secondItem="VJm-bd-UDz" secondAttribute="bottom" constant="85" id="azQ-AF-mRY"/>
+                            <constraint firstItem="gcK-c2-z3Y" firstAttribute="top" secondItem="Lp7-6E-mGw" secondAttribute="bottom" constant="8" id="fhf-sQ-3oe"/>
+                            <constraint firstItem="Lp7-6E-mGw" firstAttribute="leading" secondItem="X0m-CO-uxp" secondAttribute="leading" constant="131" id="i5N-W6-PoZ"/>
+                            <constraint firstItem="YgY-NS-Hgm" firstAttribute="leading" secondItem="RVE-hM-JK0" secondAttribute="leadingMargin" id="nu0-P2-FOi"/>
+                            <constraint firstItem="VJm-bd-UDz" firstAttribute="leading" secondItem="X0m-CO-uxp" secondAttribute="leading" constant="15" id="vIn-Zu-XTf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qm7-cA-0Vx"/>
                     <connections>
                         <outlet property="highScoreLabel" destination="YgY-NS-Hgm" id="jeZ-Pu-VmY"/>
+                        <outlet property="poki1" destination="eOw-mO-yhM" id="a4J-kV-jrF"/>
+                        <outlet property="poki2" destination="ThG-aj-meK" id="qmX-aR-BKS"/>
+                        <outlet property="poki3" destination="IJI-Rd-O1e" id="urU-GH-fTR"/>
+                        <outlet property="poki4" destination="zP3-K8-WAn" id="uki-fJ-6vw"/>
+                        <outlet property="poki5" destination="CEI-Rl-ecp" id="oxv-E7-6j6"/>
+                        <outlet property="poki6" destination="H1h-YO-D0e" id="JW7-om-mHT"/>
+                        <outlet property="poki7" destination="eCT-Cl-tnc" id="31q-yX-z1r"/>
+                        <outlet property="poki8" destination="be1-p7-pqh" id="7FU-o9-txB"/>
+                        <outlet property="poki9" destination="sDI-LA-Twp" id="ErD-Fd-Kri"/>
                         <outlet property="scoreLabel" destination="gcK-c2-z3Y" id="m3h-eq-jGM"/>
                         <outlet property="timerLabel" destination="Lp7-6E-mGw" id="utX-TN-YCH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdn-KM-Sgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693" y="129"/>
+            <point key="canvasLocation" x="1692.753623188406" y="128.57142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gNv-dc-VhL">
@@ -323,7 +336,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Poki" width="3024" height="4032"/>
+        <image name="Poki" width="150" height="202"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

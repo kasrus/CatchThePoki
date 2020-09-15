@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF54E6942508A48400FA30FB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF54E6932508A48400FA30FB /* Player.swift */; };
 		AF5F02C72503007000099874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F02C62503007000099874 /* AppDelegate.swift */; };
 		AF5F02C92503007000099874 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F02C82503007000099874 /* SceneDelegate.swift */; };
 		AF5F02CB2503007000099874 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F02CA2503007000099874 /* WelcomeVC.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF54E6932508A48400FA30FB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AF5F02C32503007000099874 /* CatchThePoki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatchThePoki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5F02C62503007000099874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF5F02C82503007000099874 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		AF27A1322508431F002CC379 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF54E6932508A48400FA30FB /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				AF5F02CB2503007000099874 /* WelcomeVC.swift in Sources */,
 				AF5F02C72503007000099874 /* AppDelegate.swift in Sources */,
 				AF5F02C92503007000099874 /* SceneDelegate.swift in Sources */,
+				AF54E6942508A48400FA30FB /* Player.swift in Sources */,
 				AF5F02DB250304A800099874 /* PokiVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
