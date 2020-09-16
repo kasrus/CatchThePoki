@@ -61,12 +61,14 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func saveClicked(_ sender: Any) {
-        UserDefaults.standard.set(nameText.text!, forKey: "name")
-        nameLabel.text = nameText.text!
         createAlert()
         if !isAlertCalled {
-            userNameCreated()
             player.name = nameText.text!
+            player.score = 0
+            UserDefaults.standard.set(nameText.text!, forKey: "name")
+            nameLabel.text = nameText.text!
+            userNameCreated()
+       
         } else {
             createUserName()
         }

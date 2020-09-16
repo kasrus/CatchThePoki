@@ -29,7 +29,7 @@ class PokiVC: UIViewController {
     var timeCounter = 15
     var myPoki:[UIImageView] = []
     var score = 0
-
+    var highScore = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +42,30 @@ class PokiVC: UIViewController {
         for i in 0 ..< 9 {
             myPoki[i].isUserInteractionEnabled = true
         }
-       
+        
+        let storedScore = UserDefaults.standard.object(forKey: "highscore")
+        //no score at all
+        if storedScore == nil {
+            highScore = 0
+            highScoreLabel.text = "\(player.name!)'s High Score: \(highScore)"
+        }
+        
+        if let newScore = storedScore as? Int {
+            highScore = newScore
+            if newScore >= score {
+                highScoreLabel.text = "\(player.name!)'s High Score: \(newScore)"
+            } else {
+                highScoreLabel.text = "\(player.name!)'s High Score: \(score)"
+            }
+        }
     }
     
     func startTimer () {
+        for poki in myPoki {
+            poki.isHidden = true
+        }
         timerLabel.text = "\(timeCounter)"
+        scoreLabel.text = "Score: \(score)"
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunction), userInfo: nil, repeats: true)
     }
     
@@ -55,7 +74,7 @@ class PokiVC: UIViewController {
         scoreLabel.text = "Score: \(score)"
     }
     
-    @objc func timerFunction () {
+    @objc func timerFunction () { 
         whereIsPoki(myPoki)
         
         timeCounter -= 1
@@ -64,7 +83,17 @@ class PokiVC: UIViewController {
         if timeCounter == 0 {
             alertPlayAgain()
             timer.invalidate()
-            highScoreLabel.text = "\(player.name!)'s High Score: \(score)"
+            
+            for poki in myPoki {
+                poki.isHidden = true
+            }
+            
+            if self.score > self.highScore {
+                self.highScore = score
+                UserDefaults.standard.set(self.highScore, forKey: "highscore")
+                highScoreLabel.text = "\(player.name!)'s High Score: \(highScore)"
+                
+            }
         }
     }
     
@@ -92,15 +121,4 @@ class PokiVC: UIViewController {
         alert.addAction(replayButton)
         self.present(alert, animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
