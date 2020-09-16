@@ -26,6 +26,7 @@ class PokiVC: UIViewController {
     @IBOutlet weak var poki9: UIImageView!
     
     var timer = Timer()
+    var hideTimer = Timer()
     var timeCounter = 15
     var myPoki:[UIImageView] = []
     var score = 0
@@ -67,6 +68,7 @@ class PokiVC: UIViewController {
         timerLabel.text = "\(timeCounter)"
         scoreLabel.text = "Score: \(score)"
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunction), userInfo: nil, repeats: true)
+        hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(whereIsPoki), userInfo: nil, repeats: true)
     }
     
     @objc func increaseScore () {
@@ -75,7 +77,7 @@ class PokiVC: UIViewController {
     }
     
     @objc func timerFunction () { 
-        whereIsPoki(myPoki)
+        whereIsPoki()
         
         timeCounter -= 1
         timerLabel.text = "\(timeCounter)"
@@ -83,7 +85,7 @@ class PokiVC: UIViewController {
         if timeCounter == 0 {
             alertPlayAgain()
             timer.invalidate()
-            
+            hideTimer.invalidate()
             for poki in myPoki {
                 poki.isHidden = true
             }
@@ -97,15 +99,15 @@ class PokiVC: UIViewController {
         }
     }
     
-    func whereIsPoki(_ poki: [UIImageView]) {
+    @objc func whereIsPoki() {
         let randomInt = Int.random(in: 0 ..< 9)
         
         for i in 0 ..< 9 where i != randomInt{
-            poki[i].isHidden = true
+            myPoki[i].isHidden = true
         }
-        poki[randomInt].isHidden = false
+        myPoki[randomInt].isHidden = false
         let pokiGesture = UITapGestureRecognizer(target: self, action: #selector(increaseScore))
-        poki[randomInt].addGestureRecognizer(pokiGesture)
+        myPoki[randomInt].addGestureRecognizer(pokiGesture)
     }
     
     func alertPlayAgain () {
